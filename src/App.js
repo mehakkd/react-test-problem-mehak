@@ -4,30 +4,28 @@ import {useState} from 'react';
 export default class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      
-    };
+    this.state = {active: true};
+    
+    // This binding is necessary to make `this` work in the callback
+    this.handleClick = this.handleClick.bind(this);
   }
 
   //handler goes here
-  //https://reactgo.com/react-change-button-text-onclick/
-  function changeText() {
-    const [active, setActive] = useState(false);
-    const handleClick = () => {
-      setActive(!active);
-    };
+  //https://reactjs.org/docs/handling-events.html
+  handleClick() {
+    this.setState(prevState => ({
+      active: !prevState.active
+    }));
   }
 
-  
-  //what does render() meaN?
   render() {
     return (
       <div>
         <p>Greetings!</p>
         <p>Button goes here</p>
       
-        <button type= "button" onClick= {handleClick}>
-          {active ? "click me" : "thanks"}
+        <button type= "button" onClick= {this.handleClick}>
+          {this.state.active ? "click me" : "thanks"}
         </button>
 
       </div>
