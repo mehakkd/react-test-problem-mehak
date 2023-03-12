@@ -22,7 +22,6 @@ export default class App extends React.Component {
     return (
       <div>
         <p>Greetings!</p>
-        <p>Button goes here</p>
       
         <button type= "button" onClick= {this.handleClick}>
           {this.state.active ? "click me" : "thanks"}
