@@ -6,6 +6,11 @@ import { Meta } from '@storybook/addon-docs';
 
 import { App } from './App';
 
+export default {
+  title: "App",
+  component: App,
+};
+
 <Meta
   title="App"
   component={App}
