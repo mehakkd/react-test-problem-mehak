@@ -6,13 +6,22 @@ import { App } from './App.stories'; //👈 Our stories imported here.
 // Add your tests here
 // See https://storybook.js.org/docs/react/writing-tests/importing-stories-in-tests#example-with-testing-library
 
-const Goodbye = () => {
-  return <h1>Bye Everyone</h1>
+const Button = () => {
+  return <button type= "button" onClick= {this.handleClick}>
+          {this.state.active ? "click me" : "thanks"}
+        </button>
 };
 
-test('should print the Goodbye component', () => {
-  render(<Goodbye/>);
-  screen.debug();
+// The button node can be extracted via its text content with screen.getByText()
+test('Extract button node with getByText', () => {
+  render(<Button/>);
+  const button = screen.getByText('click me'); 
+});
+
+// The same button node can also be extracted with screen.getByRole()
+test('Extract button node with getByRole', () => {
+  render(<Button/>);
+  const button = screen.getByRole('button'); 
 });
 
 /*
