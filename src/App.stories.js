@@ -13,10 +13,10 @@ const Template = (args) => <App {...args} />;
 
 // 👇 Each story then reuses that template
 export const Primary = Template.bind({});
-Primary.args = { backgroundColor: '#ff0', label: 'App' };
+Primary.args = { backgroundColor: '#ff0', label: 'first' };
 
 export const Secondary = Template.bind({});
-Secondary.args = { ...Primary.args, label: '😄👍😍💯' };
+Secondary.args = { ...Primary.args, label: 'second' };
 
 export const Tertiary = Template.bind({});
-Tertiary.args = { ...Primary.args, label: '📚📕📈🤓' };
+Tertiary.args = { ...Primary.args, label: 'third' };
