@@ -16,4 +16,6 @@ export default {
   component: App,
 };
 
-export const Primary: ComponentStory<typeof App> = () => <App primary>App</App>;
+export const Primary: ComponentStory<typeof App> = () => (
+  <App backgroundColor="#ff0" label="App" />
+);
