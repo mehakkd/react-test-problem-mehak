@@ -15,3 +15,5 @@ export default {
   title: 'App',
   component: App,
 };
+
+export const Primary: ComponentStory<typeof App> = () => <App primary>App</App>;
