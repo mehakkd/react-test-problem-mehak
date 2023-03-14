@@ -8,7 +8,8 @@ export default {
 };
 
 export const Default = () => <App />
-      
+export const Default2 = () => <App />
+export const Default3 = () => <App />
       
 /*
 //👇 We create a “template” of how args map to rendering
