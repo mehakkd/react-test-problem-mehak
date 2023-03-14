@@ -1,26 +1,23 @@
 // Stories for testing `App` go here
 // See https://storybook.js.org/docs/react/writing-stories/introduction#how-to-write-stories
 
-
-import { Meta } from '@storybook/addon-docs';
+import { Meta, Story } from '@storybook/addon-docs';
 
 import { App } from './App';
 
-export default {
-  title: "App",
-  component: App,
-};
+<Meta title="App" component={App} />
 
-<Meta
-  title="App"
-  component={App}
-  argTypes={{
-    variant: {
-      options: ['primary', 'secondary'],
-      control: { type: 'radio' }
-    }
-  }}
-/>
+export const Template = (args) => ({
+   //👇 Your template goes here
+});
+
+<Story 
+  name="Primary"
+  args={{ 
+    variant: 'primary',
+  }}>
+  {Template.bind({})}
+</Story>
 
 
 /*
