@@ -14,4 +14,4 @@ export default {
   */
   title: 'App',
   component: App,
-} as ComponentMeta<typeof App>;
+};
