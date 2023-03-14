@@ -4,12 +4,15 @@
 import { Meta, Story } from '@storybook/addon-docs';
 
 import { App } from './App';
+
+export default {
+  title: "App",
+  component: App,
+};
      
 //👇 We create a “template” of how args map to rendering
 const Template = (args) => <App {...args} />;
-Template.args = {
-  
-}
+//Template.args = {};
 
 // 👇 Each story then reuses that template
 export const Primary = (args) =>  
@@ -20,4 +23,3 @@ Secondary.args = { ...Primary.args, label: 'Secondary' };
 
 export const Tertiary = Template.bind({});
 Tertiary.args = { ...Primary.args, label: 'Tertiary' };
-
