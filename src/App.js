@@ -23,7 +23,7 @@ export default class App extends React.Component {
       <div>
         <p>Greetings!</p>
       
-        <button type= "button" onClick= {this.handleClick}>
+        <button type= "button" id= "changing-button" onClick= {this.handleClick}>
           {this.state.active ? "click me" : "thanks"}
         </button>
 
