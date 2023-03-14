@@ -16,6 +16,15 @@ export default {
   component: App,
 };
 
-export const Primary: ComponentStory<typeof App> = () => (
-  <App backgroundColor="#ff0" label="App" />
-);
+//👇 We create a “template” of how args map to rendering
+const Template: ComponentStory<typeof App> = (args) => <App {...args} />;
+
+//👇 Each story then reuses that template
+export const Primary = Template.bind({});
+Primary.args = { backgroundColor: '#ff0', label: 'Primary' };
+
+export const Secondary = Template.bind({});
+Secondary.args = { ...Primary.args, label: '😄👍😍💯' };
+
+export const Tertiary = Template.bind({});
+Tertiary.args = { ...Primary.args, label: '📚📕📈🤓' };
