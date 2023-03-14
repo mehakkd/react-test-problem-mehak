@@ -14,7 +14,7 @@ it('Check that the button initially displays click me', () => {
 });
 
 it('Checks that the button changes text to thanks after click', () => {
-  const { getByTestId, getByText } = render(<InvalidForm {...InvalidForm.args} />);
+  const { getByTestId, getByText } = render(<App {...App.args} />);
 
   fireEvent.click(getByText('click me'));
 
