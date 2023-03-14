@@ -9,15 +9,14 @@ import { App } from './App.stories'; //👈 Our stories imported here.
 it('Check that the button initially displays click me', () => {
   //const { getByTestId, getByText } = render(<App {...App.args} />);
    
-  const clickme = screen.getByLabelText("click me")
-  expect(clickme.innerHTML).toBe("click me")
+  const clickme = screen.getByText("click me")
+  expect(clickme).toBeInTheDocument()
 });
 
 it('Checks that the button changes text to thanks after click', () => {
   //const { getByTestId, getByText } = render(<App {...App.args} />);
 
-  fireEvent.click(screen.getByLabelText("click me"));
+  fireEvent.click(screen.getByText("click me"));
 
-  const thanks = screen.getByLabelText("thanks")
-  expect(thanks.innerHTML).toBe("thanks")
+  expect(screen.getByText("thanks")).toBeInTheDocument()
 });
