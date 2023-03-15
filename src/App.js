@@ -8,7 +8,6 @@ export default class App extends React.Component {
     this.handleClick = this.handleClick.bind(this);
   }
 
-  //handler goes here
   handleClick() {
     this.setState(prevState => ({
       active: !prevState.active
