@@ -1,16 +1,4 @@
-// Add your tests here
-// See https://storybook.js.org/docs/react/writing-tests/importing-stories-in-tests#example-with-testing-library
 import { render, screen, fireEvent } from '@testing-library/react';
-/*
-import { composeStories } from '@storybook/testing-react';
-import * as stories from './App.stories'; // import all stories from the stories file
-
-// Every component that is returned maps 1:1 with the stories, but they already contain all decorators from story level, meta level and global level.
-//composeStories will process all stories from the component you specify, 
-//compose args/decorators in all of them and return an object containing the composed stories
-const { Primary } = composeStories(stories);
-*/
-
 import { Primary } from './App.stories';
 
 it('Check that the button initially displays click me', () => {
