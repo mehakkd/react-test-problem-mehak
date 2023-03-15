@@ -19,7 +19,7 @@ it('Check that the button initially displays click me', () => {
   expect(clickme).toBeInTheDocument()
 });
 
-it('Checks that the button changes text to 'thanks' after click', () => {
+it('Checks that the button changes text to thanks after click', () => {
   render (<Primary />)
   fireEvent.click(screen.getByText("click me"));
   const thanks = screen.getByText("thanks")
